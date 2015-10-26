@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+}
+p{
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:yellow;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    list-style: none;
+}
+
+/* HEAD and TOPMENU*/
+#header-container{
+    background-color: darkblue;
+}
+#header-container #menu-arrow img{
+    width: 40px;
+    height: 40px;
+    vertical-align: bottom;
+}
+#header-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#header-container ul{
+    display: inline-block;
+    padding: 0;
+}
+#header-container ul li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-right: 1px solid white;
+}
+#header-container ul a{
+    font-size: larger;
+    margin-left: 50px;
+    margin-right:  50px;
+}
+
+/* MAIN CONTAINER*/
+#main-container{
+    float: right;
+    width: 84%;
+}
+#main-container article{
+    margin:10px;
+    padding: 10px;
+    border:1px solid darkblue;
+    background-color: white;
+}
+#main-container article img{
+    width: 50px;
+    height: 50px;
+    float:left;
+    margin-right: 10px;
+}
+#main-container article p{
+    vertical-align: top;
+}
+
+/* FRIENDS BAR*/
+#friends-bar{
+    border: 1px solid darkblue;
+    display: inline-block;
+    padding: 5px;
+    float: left;
+    width: 250px;
+    margin-top: 10px;
+}
+#friends-bar .friendsList img{
+    width: 24px;
+    height: 24px;
+    border:1px solid darkblue;
+}
+#friends-bar .friendsList{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+#friends-bar li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+#friends-bar span{
+    vertical-align: top;
+}
+#friends-bar h5{
+    margin: 5px;
+    font-style: italic;
+    font-size: large;
+}
+#friends-bar #search-friends{
+    margin-bottom: 10px;
+}
+#friends-bar #search-friends input[type="text"]{
+    height: 25px;
+    font-size: larger;
+    width: 175px;
+}
+#friends-bar #search-friends img{
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
