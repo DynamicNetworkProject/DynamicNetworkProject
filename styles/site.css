@@ -9,6 +9,9 @@ p{
     color: #6E5BAA;
     font-family: "benton-sans","BentonSans","Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;
 }
+h5{
+    color:#6E5BAA;
+}
 a{
     text-decoration: none;
     color: white;
@@ -76,16 +79,52 @@ ul li{
     background-color: white;
     border-radius: 4px
 }
-#main-container article img{
+#main-container article .profilePicture{
     width: 50px;
     height: 50px;
     float:left;
     margin-right: 10px;
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+}
+#main-container article header, #main-container article footer{
+    text-align: right;
+}
+#main-container article header{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#main-container article header .close-article-btn{
+    width: 16px;
+    height: 16px;
+}
+#main-container article .show-hide{
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+#main-container article .post-date{
+    color: #6E5BAA;
+    font-weight: bold;
+    font-size: small;
 }
 #main-container article p{
     vertical-align: top;
 }
-
+#main-container article .post-title{
+    margin: 0;
+    display: inline-block;
+    floaT: left;
+    font-size: large;
+}
+#main-container article .posted-by{
+    color: #6E5BAA;
+}
+#main-container article .posted-by-prefix{
+    color: #6E5BAA;
+    font-size: small;
+}
 /* FRIENDS BAR*/
 #friends-bar{
     border: 1px solid gray;
