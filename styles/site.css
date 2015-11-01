@@ -1,11 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: lightskyblue;
+    background-color: #EAE9F1;
 }
 p{
     padding: 0;
     margin:0;
+    color: #6E5BAA;
+    font-family: "benton-sans","BentonSans","Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;
 }
 a{
     text-decoration: none;
@@ -26,9 +28,13 @@ ul li{
     list-style: none;
 }
 
+#wrapper{
+    padding-top: 100px;
+}
+
 /* HEAD and TOPMENU*/
 #header-container{
-    background-color: darkblue;
+    background-color: #794AA2;
 }
 #header-container #menu-arrow img{
     width: 40px;
@@ -40,6 +46,8 @@ ul li{
     padding-right: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
+    position: fixed;
+    width: 100%;
 }
 #header-container ul{
     display: inline-block;
@@ -58,14 +66,15 @@ ul li{
 
 /* MAIN CONTAINER*/
 #main-container{
-    float: right;
-    width: 84%;
+    display: inline-block;
+    width: 900px;
 }
 #main-container article{
     margin:10px;
     padding: 10px;
-    border:1px solid darkblue;
+    border:1px solid gray;
     background-color: white;
+    border-radius: 4px
 }
 #main-container article img{
     width: 50px;
@@ -79,17 +88,18 @@ ul li{
 
 /* FRIENDS BAR*/
 #friends-bar{
-    border: 1px solid darkblue;
+    border: 1px solid gray;
     display: inline-block;
     padding: 5px;
-    float: left;
     width: 250px;
     margin-top: 10px;
+    vertical-align: top;
+    border-radius: 0 4px 4px 0;
 }
 #friends-bar .friendsList img{
     width: 24px;
     height: 24px;
-    border:1px solid darkblue;
+    border:1px solid gray;
 }
 #friends-bar .friendsList{
     max-height: 350px;
