@@ -26,4 +26,5 @@ function friendOnHover (eventArg) {
 	info.appendChild(title);
 
 	document.body.appendChild(info);
+	
 };
