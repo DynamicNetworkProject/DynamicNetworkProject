@@ -196,3 +196,9 @@ ul li{
     height: 40px;
     margin: 5px;
 }
+.hidden {
+    display: none;
+}
+.showed {
+    display: inline-block;
+}
