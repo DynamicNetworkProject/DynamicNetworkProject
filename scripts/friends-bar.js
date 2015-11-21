@@ -3,8 +3,40 @@ function setFriendsEvents () {
 	for (var i = 0; i < elements.length; i++) {
 		elements[i].addEventListener("mouseover", friendOnHover);
 	};
+
+	//friends-bar btn
+	var friendsBarButton = document.querySelector('#left-arrow');
+	friendsBarButton.addEventListener("click", friendsBarButtonOnclick);
 }
 
+function friendsBarButtonOnclick() {
+	var bar = document.querySelector('#friends-bar');
+	var friendBarName = document.querySelectorAll('.friendName');
+	var title = document.querySelector('.h5title');
+	var search = document.querySelector('#search-friends');
+
+	if(bar.className == 'friends-bar-opened'){
+		bar.classList.add('friends-bar-closed');
+		bar.classList.remove('friends-bar-opened');
+
+		for (var i = 0; i < friendBarName.length; i++) {
+		friendBarName[i].classList.add('hidden');;
+		};
+
+		title.classList.add('hidden');
+		search.classList.add('hidden');
+	} else {
+		bar.classList.add('friends-bar-opened');
+		bar.classList.remove('friends-bar-closed');
+
+		for (var i = 0; i < friendBarName.length; i++) {
+		friendBarName[i].classList.remove('hidden');;
+		};
+
+		title.classList.remove('hidden');
+		search.classList.remove('hidden');
+	}
+}
 function friendOnHover (eventArg) {
 	var oldInfoObjects = document.getElementsByClassName('userInfoBox');
 	for (var i = 0; i < oldInfoObjects.length; i++) {

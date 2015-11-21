@@ -130,10 +130,20 @@ ul li{
     border: 1px solid gray;
     display: inline-block;
     padding: 5px;
-    width: 250px;
+    /*width: 250px;*/
     margin-top: 10px;
     vertical-align: top;
     border-radius: 0 4px 4px 0;
+}
+.friends-bar-closed{
+    width: 50px;
+}
+.friends-bar-opened{
+    width: 250px;
+ 
+}
+.hidden{
+    display: none;
 }
 #friends-bar .friendsList img{
     width: 24px;
@@ -161,7 +171,7 @@ ul li{
     width: 20px;
     height: 20px;
     vertical-align: bottom;
-    float: right;
+    /*float: right;*/
 }
 #friends-bar #search-friends{
     margin-bottom: 10px;
