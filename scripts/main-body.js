@@ -9,8 +9,10 @@ function setArticlesLenght (articleMaxLenght) {
 		if (paragraph.innerHTML.length >= articleMaxLenght) {
 			var textPart = paragraph.innerHTML.substring(0, articleMaxLenght);
 			var hiddenPart = paragraph.innerHTML.substring(articleMaxLenght, articleMaxLenght.length);
-			textPart += '...';
+			var spanWithDots = document.createElement('span');
+			spanWithDots.innerHTML = '...';
 			paragraph.innerHTML = textPart;
+			paragraph.appendChild(spanWithDots);
 			var hiddenSpan = document.createElement('span');
 			hiddenSpan.className = 'hidden';
 			// hiddenSpan.style.display = 'none';
@@ -25,35 +27,13 @@ function setArticlesLenght (articleMaxLenght) {
 
 function showHideArticle () {
 	var thisArticle = this.parentNode.parentNode;
-	var showed = thisArticle.getElementsByClassName('hidden')[0];
-	var hidden = thisArticle.getElementsByClassName('showed')[0];
-	if (showed) {
+	var hidden = thisArticle.getElementsByClassName('hidden')[0];
+	var showed = thisArticle.getElementsByClassName('showed')[0];
+	if (hidden) {
 		thisArticle.getElementsByClassName('hidden')[0].className = 'showed';
+			document.getElementsByClassName('dots').className = 'hidden'
+	;
 	}else{
 		thisArticle.getElementsByClassName('showed')[0].className = 'hidden';
 	}
-	// var showed = thisArticle.getElementsByClassName('hidden')[0].className = 'showed';
-	// if (showed.style.display = 'none') {
-	// 	showed.style.visibility = 'visible';
-	// }
-	// if (showed.style.visibility = 'visible') {
-	// 	showed.style.visibility = 'hidden';
-	// }
-	// 	if(show === 'showed') {
-
-	// 		('click', hideArt);
-	// 	}
-	// function hideArt() {
-	// 	// var showed = document.getElementsByClassName('showed');
-	// 	// showed.className = 'hidden';
-	// 	// return showed;
-	// 	alert('a');
-	// }
-	// if (var v = thisArticle.getElementsByClassName('hidden')[0].style.visibility == 'visible') {
-	// 	v.style.visibility = 'hidden';
-	// }
-}
-// function hideArticle () {
-// 	var thisArticle = this.parentNode.parentNode;
-// 	var showed = thisArticle.getElementsByClassName('showed')[0].className = 'hidden';
-// }
+};
