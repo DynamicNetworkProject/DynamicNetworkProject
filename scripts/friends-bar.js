@@ -11,17 +11,18 @@ function setFriendsEvents () {
 
 function friendsBarButtonOnclick() {
 	var bar = document.querySelector('#friends-bar');
-	var friendBarName = document.querySelectorAll('.friendName');
+	var friendBarNames = bar.querySelectorAll('.friendName');
 	var title = document.querySelector('.h5title');
 	var search = document.querySelector('#search-friends');
+	var arrowButton = document.querySelector('#left-arrow');
 
 	if(bar.className == 'friends-bar-opened'){
 		bar.classList.add('friends-bar-closed');
 		bar.classList.remove('friends-bar-opened');
-		bar.classList.add('flipped');
+		arrowButton.classList.add('flipped');
 
-		for (var i = 0; i < friendBarName.length; i++) {
-		friendBarName[i].classList.add('hidden');;
+		for (var i = 0; i < friendBarNames.length; i++) {
+		    friendBarNames[i].classList.add('hidden');;
 		};
 
 		title.classList.add('hidden');
@@ -29,10 +30,10 @@ function friendsBarButtonOnclick() {
 	} else {
 		bar.classList.add('friends-bar-opened');
 		bar.classList.remove('friends-bar-closed');
-		bar.classList.remove('flipped');
+		arrowButton.classList.remove('flipped');
 
-		for (var i = 0; i < friendBarName.length; i++) {
-		friendBarName[i].classList.remove('hidden');;
+		for (var i = 0; i < friendBarNames.length; i++) {
+		friendBarNames[i].classList.remove('hidden');;
 		};
 
 		title.classList.remove('hidden');
@@ -50,6 +51,7 @@ function friendOnHover (eventArg) {
 
     	var img = this.getElementsByClassName('friendPic')[0].cloneNode(true);
     	var title = this.getElementsByClassName('friendName')[0].cloneNode(true);
+    	title.className = "userFriendName";
 
 	var info = document.createElement('div');
 	info.className = 'userInfoBox';
