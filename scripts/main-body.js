@@ -10,12 +10,12 @@ function setArticlesLenght (articleMaxLenght) {
 			var textPart = paragraph.innerHTML.substring(0, articleMaxLenght);
 			var hiddenPart = paragraph.innerHTML.substring(articleMaxLenght, articleMaxLenght.length);
 			var spanWithDots = document.createElement('span');
+			spanWithDots.className = 'spanWithDots';
 			spanWithDots.innerHTML = '...';
 			paragraph.innerHTML = textPart;
 			paragraph.appendChild(spanWithDots);
 			var hiddenSpan = document.createElement('span');
 			hiddenSpan.className = 'hidden';
-			// hiddenSpan.style.display = 'none';
 			hiddenSpan.innerHTML = hiddenPart;
 			paragraph.appendChild(hiddenSpan);
 		}
@@ -33,12 +33,15 @@ function showHideArticle () {
 	var thisArticle = this.parentNode.parentNode;
 	var hidden = thisArticle.getElementsByClassName('hidden')[0];
 	var showed = thisArticle.getElementsByClassName('showed')[0];
-	if (hidden) {
+	var arrow = thisArticle.getElementsByClassName('show-hide')[0];
+	if (hidden.className === 'hidden') {
 		thisArticle.getElementsByClassName('hidden')[0].className = 'showed';
-			document.getElementsByClassName('dots').className = 'hidden'
-	;
+			thisArticle.getElementsByClassName('spanWithDots')[0].classList.add('hidden');
+			arrow.classList.add('flipped');
 	}else{
 		thisArticle.getElementsByClassName('showed')[0].className = 'hidden';
-		// TODO: flipArrow;
+		thisArticle.getElementsByClassName('spanWithDots')[0].classList.remove('hidden');
+		arrow.classList.remove('flipped');
+		// TODO: flipArrowBug;
 	}
 };
