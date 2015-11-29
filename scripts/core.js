@@ -1,10 +1,5 @@
 // Composite functionality to use in the whole project
-var core = function (){
-    function _get(selector){
-        return document.querySelector(selector);
-    }
-
-    return{
-        get: _get
-    };
-}
+var closeArticleWindow = function () {
+	var currentWindow = this.parentNode.parentNode;
+	currentWindow.classList.add('hidden');
+};

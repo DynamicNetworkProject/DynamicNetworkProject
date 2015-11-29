@@ -18,12 +18,16 @@ function setArticlesLenght (articleMaxLenght) {
 			// hiddenSpan.style.display = 'none';
 			hiddenSpan.innerHTML = hiddenPart;
 			paragraph.appendChild(hiddenSpan);
-		}else {
-			// TODO: Hide show/hide button
-		// articleArrows.addEventListener('click', hideArticle);
 		}
 	};
 }
+
+(function closeArticle () {
+	var closeBtn = document.getElementsByClassName("close-article-btn");
+	for (var i = 0; i < closeBtn.length; i++) {
+		closeBtn[i].addEventListener('click', closeArticleWindow);
+	}
+})();
 
 function showHideArticle () {
 	var thisArticle = this.parentNode.parentNode;
@@ -35,5 +39,6 @@ function showHideArticle () {
 	;
 	}else{
 		thisArticle.getElementsByClassName('showed')[0].className = 'hidden';
+		// TODO: flipArrow;
 	}
 };
