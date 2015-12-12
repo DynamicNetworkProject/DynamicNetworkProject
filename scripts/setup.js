@@ -1,9 +1,11 @@
-var articleMaxLenght = 300;
+$(document).ready(function () {
+    var articleMaxLenght = 300;
 
-setArticlesLenght(articleMaxLenght);
-setFriendsEvents();
-setMainMenuEvents ();
+    setArticlesLenght(articleMaxLenght);
+    setFriendsEvents();
+    setMainMenuEvents();
 
+});
 
 
 
