@@ -18,8 +18,12 @@ function setFriendsEvents() {
         var title = document.querySelector('.h5title');
         var search = document.querySelector('#search-friends');
         var arrowButton = document.querySelector('#left-arrow');
+        var $articleMinWidth = $("article").width();
+        var $friendsBarOpened = $(".friends-bar-opened").width();
+        var $friendsBarClosed = $(".friends-bar-closed").width();
+        var $articleMaxWidth = $articleMinWidth + ($friendsBarOpened - $friendsBarClosed);
+        var $articleWidth = '';
         
-
         if (bar.className == 'friends-bar-opened') {
             bar.classList.add('friends-bar-closed');
             bar.classList.remove('friends-bar-opened');
@@ -31,7 +35,7 @@ function setFriendsEvents() {
 
             title.classList.add('hidden');
             search.classList.add('hidden');
-            $('article').width()
+            $articleWidth = $articleMaxWidth;
         } else {
             bar.classList.add('friends-bar-opened');
             bar.classList.remove('friends-bar-closed');
@@ -43,6 +47,7 @@ function setFriendsEvents() {
 
             title.classList.remove('hidden');
             search.classList.remove('hidden');
+            $articleWidth = $articleMinWidth;
         }
     }
     function friendOnHover(eventArg) {
