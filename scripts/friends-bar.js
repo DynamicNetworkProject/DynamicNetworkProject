@@ -23,7 +23,7 @@ function setFriendsEvents() {
         var $friendsBarClosed = $(".friends-bar-closed").width();
         var $articleMaxWidth = $articleMinWidth + ($friendsBarOpened - $friendsBarClosed);
         var $articleWidth = '';
-        
+
         if (bar.className == 'friends-bar-opened') {
             bar.classList.add('friends-bar-closed');
             bar.classList.remove('friends-bar-opened');
@@ -77,6 +77,8 @@ function setFriendsEvents() {
     $(".friendsList > li").mouseout(function () {
         $('.userInfoBox').remove();
     });
-  
-    
+    $(".friendsList > li").mouseover(function () {
+        $('.userInfoBox').hide();
+        $('.userInfoBox').fadeIn(800);
+    });
 }
