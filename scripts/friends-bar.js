@@ -18,11 +18,12 @@ function setFriendsEvents() {
         var title = document.querySelector('.h5title');
         var search = document.querySelector('#search-friends');
         var arrowButton = document.querySelector('#left-arrow');
-        var $articleMinWidth = $("article").width();
-        var $friendsBarOpened = $(".friends-bar-opened").width();
-        var $friendsBarClosed = $(".friends-bar-closed").width();
-        var $articleMaxWidth = $articleMinWidth + ($friendsBarOpened - $friendsBarClosed);
-        var $articleWidth = '';
+
+        var articleMinWidth = $('#main-container').width();
+        var friendsBarOpened = $('.friends-bar-opened').width();
+        var friendsBarClosed = $('.friends-bar-closed').width();
+        var articleMaxWidth = articleMinWidth + (friendsBarOpened - friendsBarClosed);
+//Bug with the width(padding, border, margin are not included)
 
         if (bar.className == 'friends-bar-opened') {
             bar.classList.add('friends-bar-closed');
@@ -35,7 +36,8 @@ function setFriendsEvents() {
 
             title.classList.add('hidden');
             search.classList.add('hidden');
-            $articleWidth = $articleMaxWidth;
+            $('article').hide();
+            $('article').fadeIn(500).width(articleMaxWidth);
         } else {
             bar.classList.add('friends-bar-opened');
             bar.classList.remove('friends-bar-closed');
@@ -47,7 +49,8 @@ function setFriendsEvents() {
 
             title.classList.remove('hidden');
             search.classList.remove('hidden');
-            $articleWidth = $articleMinWidth;
+            $('article').hide();
+            $('article').fadeIn(500).width(articleMinWidth);
         }
     }
     function friendOnHover(eventArg) {
@@ -79,6 +82,6 @@ function setFriendsEvents() {
     });
     $(".friendsList > li").mouseover(function () {
         $('.userInfoBox').hide();
-        $('.userInfoBox').fadeIn(800);
+        $('.userInfoBox').fadeIn(700);
     });
 }
