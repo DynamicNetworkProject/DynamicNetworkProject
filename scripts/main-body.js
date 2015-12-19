@@ -1,3 +1,9 @@
+function setMainBodyEvents(){
+	 var articleMaxLenght = 300;
+	 
+	 setArticlesLenght(articleMaxLenght);
+	 closeArticle();
+};
 
 function setArticlesLenght (articleMaxLenght) {
 	var articles = document.getElementsByClassName('article');
@@ -22,12 +28,12 @@ function setArticlesLenght (articleMaxLenght) {
 	};
 }
 
-(function closeArticle () {
+function closeArticle () {
 	var closeBtn = document.getElementsByClassName("close-article-btn");
 	for (var i = 0; i < closeBtn.length; i++) {
 		closeBtn[i].addEventListener('click', closeArticleWindow);
 	}
-})();
+};
 
 function showHideArticle () {
 	var thisArticle = this.parentNode.parentNode;
