@@ -1,5 +1,5 @@
 function renderFriendsList() {
-    var dataContextFriends = new dataContext();
+    var dataContextFriends = new DataContext();
     var friendsList = dataContextFriends.getFriends;
 
     var htmlTemplate = document.getElementById("friendsList-template").innerHTML;
