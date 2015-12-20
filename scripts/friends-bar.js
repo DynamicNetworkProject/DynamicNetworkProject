@@ -7,7 +7,8 @@ function renderFriendsList() {
 
     var objectsForRendering = { friends: friendsList };
     var generatedHtml = template(objectsForRendering);
-    document.getElementById("friendsList-container").innerHTML = generatedHtml;
+
+    $("#friends-list-wrapper").html(generatedHtml);
 }
 
 function setupFriends() {
