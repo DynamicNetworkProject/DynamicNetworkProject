@@ -1,4 +1,31 @@
- <article class="article">
+ <script id="articles-template" type="text/x-handlebars-template">
+     {{#articles}}
+     <article class="article">
+         <header>
+             <h5 class="post-title">{{title}}</h5>
+             <span class="posted-by-prefix">
+                 Posted by:
+             </span>
+             <span class="posted-by">
+                 {{postedBy}}
+             </span>
+             <span class="close-article-btn">
+                 <img src="imgs/closebutton.png" alt="close" />
+             </span>
+         </header>
+         <img src="{{imgURL}}" alt="image" class="profilePicture" />
+         <p>
+            {{paragraph}}
+         </p>
+         <footer>
+             <span class="post-date">Posted on: {{datePosted}}</span>
+             <img src="imgs/downarrow.png" alt="show-hide" class="show-hide" />
+         </footer>
+     </article>
+     {{/articles}}
+</script>
+
+<!--<article class="article">
             <header>
                 <h5 class="post-title">Title of Lorem ipsum dolor sit amet</h5>
                  <span class="posted-by-prefix">
@@ -99,4 +126,4 @@
                 <span class="post-date">Posted on: 12.07.2015</span>
                 <img src="imgs/downarrow.png" alt="show-hide" class="show-hide"/>
             </footer>
-    </article>
+    </article>-->
