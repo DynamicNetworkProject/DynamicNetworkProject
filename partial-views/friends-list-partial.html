@@ -1,3 +1,44 @@
+<div id="frendsList-container">
+    <!-- Generated content -->
+</div>
+
+<script src="../libs/handlebars.min.js"></script>
+
+<script id="freindList-template" type="text/handlebars-template">
+    <ul class="friendsList">
+        {{#friends}}
+        <li>
+            <img src="{{picUrl}}" alt="{{picAlt}}" class="friendPic" />
+            <span class="friendName">{{friendName}}</span>
+        </li>
+        {{/friends}}
+    </ul>
+</script>
+
+<script>
+        var friendsFromDatabase = [{
+            picUrl: "imgs/profiles/1766.png",
+            picAlt: "profilePicture",
+            friendName: "Ivan Ivanov",
+        },
+        {
+            picUrl: "imgs/profiles/homer.jpg",
+            picAlt: "profilePicture",
+            friendName: "Pesho Petrov",
+        }];
+
+
+        var htmlTemplate = document.getElementById("freindList-template").innerHTML;
+        var template = Handlebars.compile(htmlTemplate);
+
+        var objectsForRendering = { friends: friendsFromDatabase };
+        var generatedHtml = template(objectsForRendering);
+        document.getElementById("frendsList-container").innerHTML = generatedHtml;
+
+</script>
+
+<!--
+
 <ul class="friendsList">
             <li>
                 <img src="imgs/profiles/1766.png" alt="profilePicture" class="friendPic"/>
@@ -73,4 +114,4 @@
                 <img src="imgs/profiles/profile_picture_by_pratikartist-d5cuu1m.jpg" alt="profilePicture" class="friendPic"/>
                 <span class="friendName">World of warcraft</span>
             </li>
-        </ul>
+        </ul>-->
