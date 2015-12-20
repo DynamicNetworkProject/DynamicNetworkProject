@@ -1,10 +1,10 @@
-<div id="frendsList-container">
+<div id="friendsList-container">
     <!-- Generated content -->
 </div>
 
 <script src="../libs/handlebars.min.js"></script>
 
-<script id="freindList-template" type="text/handlebars-template">
+<script id="friendsList-template" type="text/handlebars-template">
     <ul class="friendsList">
         {{#friends}}
         <li>
@@ -16,7 +16,7 @@
 </script>
 
 <script>
-        var friendsFromDatabase = [{
+        /*var friendsFromDatabase = [{
             picUrl: "imgs/profiles/1766.png",
             picAlt: "profilePicture",
             friendName: "Ivan Ivanov",
@@ -28,12 +28,12 @@
         }];
 
 
-        var htmlTemplate = document.getElementById("freindList-template").innerHTML;
+        var htmlTemplate = document.getElementById("friendsList-template").innerHTML;
         var template = Handlebars.compile(htmlTemplate);
-
+        
         var objectsForRendering = { friends: friendsFromDatabase };
         var generatedHtml = template(objectsForRendering);
-        document.getElementById("frendsList-container").innerHTML = generatedHtml;
+        document.getElementById("friendsList-container").innerHTML = generatedHtml;*/
 
 </script>
 
