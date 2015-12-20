@@ -1,5 +1,18 @@
+function renderFriendsList() {
+    var dataContextFriends = new dataContext();
+    var friendsList = dataContextFriends.getFriends;
+
+    var htmlTemplate = document.getElementById("friendsList-template").innerHTML;
+    var template = Handlebars.compile(htmlTemplate);
+
+    var objectsForRendering = { friends: friendsList };
+    var generatedHtml = template(objectsForRendering);
+    document.getElementById("friendsList-container").innerHTML = generatedHtml;
+}
+
 
 function setFriendsEvents() {
+    renderFriendsList();
     /*var elements = document.querySelectorAll('.friendsList > li');
 	for (var i = 0; i < elements.length; i++) {
 		elements[i].addEventListener("mouseover", friendOnHover);
@@ -23,7 +36,7 @@ function setFriendsEvents() {
         var friendsBarOpened = $('.friends-bar-opened').width();
         var friendsBarClosed = $('.friends-bar-closed').width();
         var articleMaxWidth = articleMinWidth + (friendsBarOpened - friendsBarClosed);
-//Bug with the width(padding, border, margin are not included)
+        //Bug with the width(padding, border, margin are not included)
 
         if (bar.className == 'friends-bar-opened') {
             bar.classList.add('friends-bar-closed');
