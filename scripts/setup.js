@@ -1,11 +1,11 @@
 $(document).ready(function () {  
-    $("#main-container").load("partial-views/articles-partial.html", setMainBodyEvents);
+    $("#main-container").load("partial-views/articles-partial.html", setupMainBody);
 	
-    $("#friends-list-wrapper").load("partial-views/friends-list-partial.html", setFriendsEvents);
+    $("#friends-list-wrapper").load("partial-views/friends-list-partial.html", setupFriends);
 	
     setMainMenuEvents();
 
-    //Handlebars
+    setSearchFriendsEvents();
 });
 
 

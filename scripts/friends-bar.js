@@ -10,20 +10,11 @@ function renderFriendsList() {
     document.getElementById("friendsList-container").innerHTML = generatedHtml;
 }
 
-
-function setFriendsEvents() {
+function setupFriends() {
     renderFriendsList();
-    /*var elements = document.querySelectorAll('.friendsList > li');
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].addEventListener("mouseover", friendOnHover);
-	};*/
 
     $(".friendsList > li").mouseover(friendOnHover);
     $("#left-arrow").click(friendsBarButtonOnclick);
-
-    //friends-bar btn
-    /*var friendsBarButton = document.querySelector('#left-arrow');
-	friendsBarButton.addEventListener("click", friendsBarButtonOnclick);*/
 
     function friendsBarButtonOnclick() {
         var bar = document.querySelector('#friends-bar');

@@ -1,4 +1,3 @@
-
 var DataContext = function () {
     var friends = [{
         picUrl: "imgs/profiles/1766.png",
