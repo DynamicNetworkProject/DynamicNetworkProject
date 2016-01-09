@@ -1,0 +1,6 @@
+1. Download and install Node.js
+2. Right click in the empty space in the application's directory (where 'app.js' is)
+3. Type 'npm install express' to load express.js  module
+4. Select Open 'Command Window Here'
+5. Type 'node app.js' + enter (type 'ctrl + c' to stop)
+6. Type in the browser 'localhost:8081' 
